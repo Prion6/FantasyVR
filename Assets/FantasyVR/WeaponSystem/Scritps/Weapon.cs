@@ -7,7 +7,7 @@ namespace WeaponSystem
     [RequireComponent(typeof(Rigidbody))]
     public abstract class Weapon : MonoBehaviour
     {
-        [SerializeField] private Rigidbody m_rigidbody;
+        [SerializeField] protected Rigidbody m_rigidbody;
         private Vector3 lastVelocity;
 
         private void OnCollisionEnter(Collision collision)

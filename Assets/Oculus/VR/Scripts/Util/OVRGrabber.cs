@@ -287,7 +287,7 @@ public class OVRGrabber : MonoBehaviour
             // Note: force teleport on grab, to avoid high-speed travel to dest which hits a lot of other objects at high
             // speed and sends them flying. The grabbed object may still teleport inside of other objects, but fixing that
             // is beyond the scope of this demo.
-            MoveGrabbedObject(m_lastPos, m_lastRot, true);
+            MoveGrabbedObject(m_lastPos, m_lastRot, false);
             if(m_parentHeldObject)
             {
                 m_grabbedObj.transform.parent = transform;
