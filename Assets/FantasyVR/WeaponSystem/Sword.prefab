@@ -671,6 +671,20 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints:
   - {fileID: 639515507}
+--- !u!64 &1070065336
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4509856312266087787}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300002, guid: b1a2854a747ab284f9be0919d48d97b4, type: 3}
 --- !u!65 &639515507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -741,6 +755,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1a2854a747ab284f9be0919d48d97b4, type: 3}
+--- !u!1 &4509856312266087787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: b1a2854a747ab284f9be0919d48d97b4,
+    type: 3}
+  m_PrefabInstance: {fileID: 4509856312266185675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4509856312266047823 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: b1a2854a747ab284f9be0919d48d97b4,
