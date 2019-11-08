@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: 6bde2b3fc5ac45947853b2be658e26dd
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: mieszczani3_outline
+    100002: mieszczanin
+    100004: mieszczanin3
+    100006: mieszczanin4
+    100008: mieszczanin4_outline
+    100010: mieszczanin_2
+    100012: mieszczanin_2_outline
+    100014: mieszczanin_outline
+    100016: //RootNode
+    400000: mieszczani3_outline
+    400002: mieszczanin
+    400004: mieszczanin3
+    400006: mieszczanin4
+    400008: mieszczanin4_outline
+    400010: mieszczanin_2
+    400012: mieszczanin_2_outline
+    400014: mieszczanin_outline
+    400016: //RootNode
+    2100000: outline
+    2100002: Material.005
+    2100004: default
+    2100006: lambert2SG
+    2100008: mieszczanin_retopo_v1_buty_Default
+    2300000: mieszczani3_outline
+    2300002: mieszczanin
+    2300004: mieszczanin3
+    2300006: mieszczanin4
+    2300008: mieszczanin4_outline
+    2300010: mieszczanin_2
+    2300012: mieszczanin_2_outline
+    2300014: mieszczanin_outline
+    3300000: mieszczani3_outline
+    3300002: mieszczanin
+    3300004: mieszczanin3
+    3300006: mieszczanin4
+    3300008: mieszczanin4_outline
+    3300010: mieszczanin_2
+    3300012: mieszczanin_2_outline
+    3300014: mieszczanin_outline
+    4300000: mieszczanin4_outline
+    4300002: mieszczani3_outline
+    4300004: mieszczanin_2_outline
+    4300006: mieszczanin_outline
+    4300008: mieszczanin4
+    4300010: mieszczanin3
+    4300012: mieszczanin_2
+    4300014: mieszczanin
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'Hips' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton:
+    - name: Sketchfab_2017_04_30_15_59_41(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mieszczanin4_outline
+      parentName: Sketchfab_2017_04_30_15_59_41(Clone)
+      position: {x: -0.006885767, y: 0.18109131, z: 0.91075355}
+      rotation: {x: 0.000000053547375, y: 0.75359124, z: -0.000000061387745, w: 0.6573433}
+      scale: {x: 1.6077499, y: 1.6077502, z: 1.6077499}
+    - name: mieszczani3_outline
+      parentName: Sketchfab_2017_04_30_15_59_41(Clone)
+      position: {x: 0.80457014, y: 2.3321352, z: 1.6207479}
+      rotation: {x: -7.4516604e-10, y: 0.99995816, z: -0.00000008145693, w: -0.009147592}
+      scale: {x: 0.84381306, y: 0.8438132, z: 0.84381306}
+    - name: mieszczanin_2_outline
+      parentName: Sketchfab_2017_04_30_15_59_41(Clone)
+      position: {x: -1.8779964, y: 2.6153548, z: 1.1046286}
+      rotation: {x: 0.00000008144482, y: -0.019524992, z: 0.0000000015905125, w: 0.9998094}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mieszczanin_outline
+      parentName: Sketchfab_2017_04_30_15_59_41(Clone)
+      position: {x: -0.84499264, y: 2.5692027, z: 1.8431351}
+      rotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mieszczanin4
+      parentName: Sketchfab_2017_04_30_15_59_41(Clone)
+      position: {x: -0.006885767, y: 0.18109131, z: 0.91075355}
+      rotation: {x: 0.000000053547375, y: 0.75359124, z: -0.000000061387745, w: 0.6573433}
+      scale: {x: 1.6077499, y: 1.6077502, z: 1.6077499}
+    - name: mieszczanin3
+      parentName: Sketchfab_2017_04_30_15_59_41(Clone)
+      position: {x: 0.80457014, y: 2.3321352, z: 1.6207479}
+      rotation: {x: -7.4516604e-10, y: 0.99995816, z: -0.00000008145693, w: -0.009147592}
+      scale: {x: 0.84381306, y: 0.8438132, z: 0.84381306}
+    - name: mieszczanin_2
+      parentName: Sketchfab_2017_04_30_15_59_41(Clone)
+      position: {x: -1.8779964, y: 2.6153548, z: 1.1046286}
+      rotation: {x: 0.00000008144482, y: -0.019524992, z: 0.0000000015905125, w: 0.9998094}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mieszczanin
+      parentName: Sketchfab_2017_04_30_15_59_41(Clone)
+      position: {x: -0.84499264, y: 2.5692027, z: 1.8431351}
+      rotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

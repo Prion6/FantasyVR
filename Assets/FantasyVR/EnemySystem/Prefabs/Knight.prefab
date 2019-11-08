@@ -91,7 +91,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4795799824227976145}
   - component: {fileID: 4795799824218434647}
-  - component: {fileID: 4795799822923317482}
   - component: {fileID: 4795799822923317481}
   m_Layer: 15
   m_Name: Knight
@@ -109,7 +108,7 @@ Transform:
   m_GameObject: {fileID: 4795799824227819057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.099, y: 0, z: -0.694}
-  m_LocalScale: {x: 0.30451107, y: 0.30451107, z: 0.30451107}
+  m_LocalScale: {x: 0.846681, y: 0.846681, z: 0.846681}
   m_Children:
   - {fileID: 4795799824227976155}
   - {fileID: 4795799824227976157}
@@ -137,19 +136,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &4795799822923317482
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4795799824227819057}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 3.1424496, z: 1}
-  m_Center: {x: 0, y: 1.0712252, z: 0}
 --- !u!114 &4795799822923317481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7531ca58361bb1e4ea6bb3d450e2313e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alive: 1
 --- !u!1 &4795799824227819059
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976147}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +194,8 @@ GameObject:
   - component: {fileID: 4795799823249789643}
   - component: {fileID: 4795799823249789640}
   - component: {fileID: 4795799823249789642}
-  m_Layer: 15
+  - component: {fileID: 401395463}
+  m_Layer: 17
   m_Name: B_Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +233,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!144 &4795799823249789640
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -257,7 +245,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.12868607, y: -0.0001715906, z: 0.000000014901161}
+  m_ConnectedAnchor: {x: -0.12868607, y: -0.0001715268, z: 0.000000014901161}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -304,6 +292,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6348589, y: 0.33689135, z: 0.3368914}
   m_Center: {x: -0.18874344, y: 0.00002130866, z: 0.16844572}
+--- !u!114 &401395463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795799824227819061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280afd4cb3637844599ccb11f485a755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidableObjects:
+    serializedVersion: 2
+    m_Bits: 65536
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4795799822923317481}
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &4795799824227819063
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +335,8 @@ GameObject:
   - component: {fileID: 4795799822514399436}
   - component: {fileID: 4795799822514399437}
   - component: {fileID: 4795799822514399439}
-  m_Layer: 15
+  - component: {fileID: 1817633680}
+  m_Layer: 17
   m_Name: B_R_UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +373,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!144 &4795799822514399437
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -365,7 +385,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.5061729, y: -0.00023158445, z: -0.33689126}
+  m_ConnectedAnchor: {x: -0.506173, y: -0.00023164414, z: -0.33689138}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -413,6 +433,37 @@ CapsuleCollider:
   m_Height: 0.37960747
   m_Direction: 0
   m_Center: {x: -0.18980373, y: 0, z: 0}
+--- !u!114 &1817633680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795799824227819063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280afd4cb3637844599ccb11f485a755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidableObjects:
+    serializedVersion: 2
+    m_Bits: 65536
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4795799822923317481}
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &4795799824227819065
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +615,7 @@ SkinnedMeshRenderer:
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
-  m_UpdateWhenOffscreen: 0
+  m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300002, guid: 417a287abb2cab94889f1f1ddd91f928, type: 3}
   m_Bones:
@@ -635,7 +686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976157}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: Motion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976097}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Finger22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -696,7 +747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976099}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Finger21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,7 +778,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976101}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Finger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976103}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Finger12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -789,7 +840,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976105}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Finger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -821,7 +872,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976107}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Finger32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -851,7 +902,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976109}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Finger31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -882,7 +933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976111}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Finger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -914,7 +965,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976113}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -945,7 +996,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976115}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -979,7 +1030,8 @@ GameObject:
   - component: {fileID: 4795799824155727349}
   - component: {fileID: 4795799824155727346}
   - component: {fileID: 4795799824155727348}
-  m_Layer: 15
+  - component: {fileID: 117358556}
+  m_Layer: 17
   m_Name: B_L_Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1016,7 +1068,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!144 &4795799824155727346
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1028,7 +1080,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.55950505, y: 0.000000072061084, z: 0.00000002980815}
+  m_ConnectedAnchor: {x: -0.559505, y: 0.000000016472768, z: 0.000000029808632}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -1076,6 +1128,37 @@ CapsuleCollider:
   m_Height: 0.70452076
   m_Direction: 0
   m_Center: {x: -0.35226038, y: 0, z: 0}
+--- !u!114 &117358556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795799824227819413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280afd4cb3637844599ccb11f485a755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidableObjects:
+    serializedVersion: 2
+    m_Bits: 65536
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4795799822923317481}
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &4795799824227819415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1171,8 @@ GameObject:
   - component: {fileID: 4795799823260964556}
   - component: {fileID: 4795799823260964557}
   - component: {fileID: 4795799823260964559}
-  m_Layer: 15
+  - component: {fileID: 2095180781}
+  m_Layer: 17
   m_Name: B_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1125,7 +1209,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!144 &4795799823260964557
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1137,7 +1221,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.63438207, y: -0.0003338605, z: 0.00000003274727}
+  m_ConnectedAnchor: {x: -0.63438207, y: -0.0003338521, z: 0.000000032747298}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -1184,6 +1268,37 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.06799298
   m_Center: {x: -0.06799298, y: 0, z: 0}
+--- !u!114 &2095180781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795799824227819415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280afd4cb3637844599ccb11f485a755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidableObjects:
+    serializedVersion: 2
+    m_Bits: 65536
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4795799822923317481}
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &4795799824227819417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,7 +1308,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976121}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Finger11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1224,7 +1339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976123}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Finger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1255,7 +1370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976125}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Finger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1285,7 +1400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976127}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Finger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1316,7 +1431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976161}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1347,7 +1462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976163}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Finger42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1377,7 +1492,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976165}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Finger41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1408,7 +1523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976167}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Finger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1440,7 +1555,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976169}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1473,7 +1588,8 @@ GameObject:
   - component: {fileID: 4795799824313643743}
   - component: {fileID: 4795799824313643742}
   - component: {fileID: 4795799824313643553}
-  m_Layer: 15
+  - component: {fileID: 307643469}
+  m_Layer: 17
   m_Name: B_R_Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1510,7 +1626,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!144 &4795799824313643742
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1522,7 +1638,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.00000014901161, z: -0.15105616}
+  m_ConnectedAnchor: {x: 0.00000011920929, y: -0.000000029802322, z: -0.15105616}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -1570,6 +1686,37 @@ CapsuleCollider:
   m_Height: 0.5595049
   m_Direction: 0
   m_Center: {x: -0.27975246, y: 0, z: 0}
+--- !u!114 &307643469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795799824227819467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280afd4cb3637844599ccb11f485a755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidableObjects:
+    serializedVersion: 2
+    m_Bits: 65536
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4795799822923317481}
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &4795799824227819469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,7 +1726,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976173}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1617,7 +1764,8 @@ GameObject:
   - component: {fileID: 4795799823344946325}
   - component: {fileID: 4795799823344946322}
   - component: {fileID: 4795799823344946324}
-  m_Layer: 15
+  - component: {fileID: 381417194}
+  m_Layer: 17
   m_Name: B_R_Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1654,7 +1802,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!144 &4795799823344946322
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1666,7 +1814,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.37960747, y: 0, z: 0.000000029802333}
+  m_ConnectedAnchor: {x: -0.37960735, y: 0.00000004097819, z: -0.00000011920933}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -1714,6 +1862,37 @@ CapsuleCollider:
   m_Height: 0.5957064
   m_Direction: 0
   m_Center: {x: -0.2978532, y: 0, z: 0}
+--- !u!114 &381417194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795799824227819471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280afd4cb3637844599ccb11f485a755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidableObjects:
+    serializedVersion: 2
+    m_Bits: 65536
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4795799822923317481}
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &4795799824227819473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,7 +1902,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976177}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Finger21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1754,7 +1933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976179}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Finger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1785,7 +1964,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976181}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Finger12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1815,7 +1994,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976183}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Finger11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1846,7 +2025,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976185}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Finger32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1876,7 +2055,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976187}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Finger31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1907,7 +2086,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976189}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Finger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1939,7 +2118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976191}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Finger22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1969,7 +2148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976065}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Clavicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2003,7 +2182,8 @@ GameObject:
   - component: {fileID: 4795799822780901431}
   - component: {fileID: 4795799822780901428}
   - component: {fileID: 4795799822780901430}
-  m_Layer: 15
+  - component: {fileID: 1566268564}
+  m_Layer: 17
   m_Name: B_R_Calf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2040,7 +2220,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!144 &4795799822780901428
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -2052,7 +2232,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.5595049, y: 0.000000057305442, z: -0.000000059604446}
+  m_ConnectedAnchor: {x: -0.5595049, y: -0.000000031664968, z: -0.00000005960476}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2100,6 +2280,37 @@ CapsuleCollider:
   m_Height: 0.7045209
   m_Direction: 0
   m_Center: {x: -0.35226044, y: 0, z: 0}
+--- !u!114 &1566268564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795799824227819491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280afd4cb3637844599ccb11f485a755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidableObjects:
+    serializedVersion: 2
+    m_Bits: 65536
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4795799822923317481}
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &4795799824227819493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,7 +2322,8 @@ GameObject:
   - component: {fileID: 4795799824227976069}
   - component: {fileID: 4795799822837200140}
   - component: {fileID: 4795799822837200143}
-  m_Layer: 15
+  - component: {fileID: 1478945315}
+  m_Layer: 17
   m_Name: B_Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2143,14 +2355,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4795799824227819493}
   serializedVersion: 2
-  m_Mass: 3.125
+  m_Mass: 312.5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &4795799822837200143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2164,6 +2376,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6348591, y: 0.33689135, z: 0.3368913}
   m_Center: {x: -0.31742942, y: -0.000000834465, z: -0.16844565}
+--- !u!114 &1478945315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795799824227819493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280afd4cb3637844599ccb11f485a755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidableObjects:
+    serializedVersion: 2
+    m_Bits: 65536
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4795799822923317481}
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &4795799824227819495
 GameObject:
   m_ObjectHideFlags: 0
@@ -2173,7 +2416,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976071}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2204,7 +2447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976073}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Finger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2235,7 +2478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976075}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Finger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2265,7 +2508,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976077}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Finger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2296,7 +2539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976079}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_R_Finger0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2330,7 +2573,8 @@ GameObject:
   - component: {fileID: 4795799823821997691}
   - component: {fileID: 4795799823821997688}
   - component: {fileID: 4795799823821997690}
-  m_Layer: 15
+  - component: {fileID: 422872550}
+  m_Layer: 17
   m_Name: B_L_Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2367,7 +2611,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!144 &4795799823821997688
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -2379,7 +2623,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.3796074, y: -0.000000048428785, z: 0.0000002980231}
+  m_ConnectedAnchor: {x: -0.3796074, y: 0.000000011175874, z: 0.0000002980231}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -2427,6 +2671,37 @@ CapsuleCollider:
   m_Height: 0.59570616
   m_Direction: 0
   m_Center: {x: -0.29785308, y: 0, z: 0}
+--- !u!114 &422872550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795799824227819505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280afd4cb3637844599ccb11f485a755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidableObjects:
+    serializedVersion: 2
+    m_Bits: 65536
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4795799822923317481}
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &4795799824227819507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,7 +2711,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976083}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2467,7 +2742,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976085}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Finger42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2497,7 +2772,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976087}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Finger41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2531,7 +2806,8 @@ GameObject:
   - component: {fileID: 4795799822567695750}
   - component: {fileID: 4795799822567695753}
   - component: {fileID: 4795799822567695752}
-  m_Layer: 15
+  - component: {fileID: 310657920}
+  m_Layer: 17
   m_Name: B_L_UpperArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2568,7 +2844,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!144 &4795799822567695753
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -2580,7 +2856,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.5061727, y: -0.00023189723, z: 0.33689147}
+  m_ConnectedAnchor: {x: -0.5061727, y: -0.00023180782, z: 0.33689147}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2628,6 +2904,37 @@ CapsuleCollider:
   m_Height: 0.3796074
   m_Direction: 0
   m_Center: {x: -0.1898037, y: 0, z: 0}
+--- !u!114 &310657920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795799824227819513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280afd4cb3637844599ccb11f485a755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidableObjects:
+    serializedVersion: 2
+    m_Bits: 65536
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4795799822923317481}
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &4795799824227819515
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,7 +2944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976091}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Toe0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2670,7 +2977,8 @@ GameObject:
   - component: {fileID: 4795799823954974707}
   - component: {fileID: 4795799823954974706}
   - component: {fileID: 4795799823954974709}
-  m_Layer: 15
+  - component: {fileID: 97442242}
+  m_Layer: 17
   m_Name: B_L_Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2707,7 +3015,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!144 &4795799823954974706
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -2719,7 +3027,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.00000010430813, z: 0.15105619}
+  m_ConnectedAnchor: {x: 0.00000011920929, y: 0.00000016391277, z: 0.15105619}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2767,6 +3075,37 @@ CapsuleCollider:
   m_Height: 0.55950505
   m_Direction: 0
   m_Center: {x: -0.27975252, y: 0, z: 0}
+--- !u!114 &97442242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795799824227819517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280afd4cb3637844599ccb11f485a755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidableObjects:
+    serializedVersion: 2
+    m_Bits: 65536
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4795799822923317481}
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &4795799824227819519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2776,7 +3115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4795799824227976095}
-  m_Layer: 15
+  m_Layer: 17
   m_Name: B_L_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}

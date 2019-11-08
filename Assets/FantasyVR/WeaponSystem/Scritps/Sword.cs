@@ -11,6 +11,7 @@ namespace WeaponSystem
 
         private void Update()
         {
+            return;
             if (m_rigidbody.velocity.magnitude + m_rigidbody.angularVelocity.magnitude >= 5)
             {
                 OVRInput.SetControllerVibration(1,1, OVRInput.Controller.RTouch);
