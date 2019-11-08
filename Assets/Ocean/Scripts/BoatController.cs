@@ -67,12 +67,12 @@ public class BoatController : Boyancy{
 	{
 		base.FixedUpdate();
 
-		m_rigidbody.AddRelativeForce(Vector3.forward * m_verticalInput * m_accelerationFactor);
+		/*m_rigidbody.AddRelativeForce(Vector3.forward * m_verticalInput * m_accelerationFactor);
         m_rigidbody.AddRelativeTorque(
 			m_verticalInput * -m_accelerationTorqueFactor,
 			m_horizontalInput * m_turningFactor,
 			m_horizontalInput * -m_turningTorqueFactor
-        );
+        );*/
 
         if(m_motors.Count > 0)
         {

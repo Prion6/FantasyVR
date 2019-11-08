@@ -90,7 +90,7 @@ Material:
     - _SurfaceColorLod1: {r: 1, g: 1, b: 1, a: 1}
     - _WaterColor: {r: 0.14012992, g: 0.57304204, b: 0.6320754, a: 1}
     - _WaterColorLod1: {r: 1, g: 1, b: 1, a: 1}
-    - _WaveOffset: {r: -61.17151, g: -61.17151, b: -61.17151, a: -61.17151}
+    - _WaveOffset: {r: -98.41711, g: -98.41711, b: -98.41711, a: -98.41711}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6
