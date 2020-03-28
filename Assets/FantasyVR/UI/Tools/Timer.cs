@@ -8,32 +8,30 @@ public class Timer : MonoBehaviour
     private float timer;
     private bool paused;
     private bool inited;
-    public delegate void TimerEvent();
-    public TimerEvent OnFinish;
-    public TimerEvent OnInit;
-    public TimerEvent OnRunning;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Init();
     }
 
     // Update is called once per frame
+
     void Update()
     {
-        if(inited)
+        if (inited)
         {
-            if(!paused)
+            if (!paused)
             {
                 timer += Time.deltaTime;
-                if(timer >= totalTime)
+                if (timer >= totalTime)
                 {
                     Finish();
                 }
                 else
                 {
-                    OnRunning.Invoke();
+                    TimerHUD.OnRunning.Invoke();
                 }
             }
         }
@@ -41,14 +39,14 @@ public class Timer : MonoBehaviour
 
     public void Init()
     {
-        OnInit.Invoke();
         inited = true;
+        TimerHUD.OnInit.Invoke();
     }
 
     public void Finish()
     {
+        TimerHUD.OnFinish.Invoke();
         inited = false;
-        OnFinish.Invoke();
     }
 
     public int ElapsedMin()
