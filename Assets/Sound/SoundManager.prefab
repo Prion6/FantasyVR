@@ -57,7 +57,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: normal attack
-    clip: {fileID: 8300000, guid: f23d2e3281bc49040b52f9cadb355fb2, type: 3}
+    clip: {fileID: 8300000, guid: 13ba365db216351469958d28fa17c0fe, type: 3}
     volume: 1
     pitch: 1
     loop: 0
