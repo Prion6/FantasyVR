@@ -10,7 +10,7 @@ public class TimerHUD : HUD
 
     void Start()
     {
-        OnRunning += Actualize;
+        timer.OnTick += Actualize;
     }
 
     // Update is called once per frame
@@ -21,11 +21,5 @@ public class TimerHUD : HUD
     void Actualize()
     {
         text.text = (timer.ContdownMin() + ":" + timer.ContdownSec() + ":" + timer.ContodownMillis());
-        OnActualize.Invoke();
-    }
-
-    void Finish()
-    {
-        OnFinish();
     }
 }

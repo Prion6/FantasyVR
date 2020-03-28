@@ -6,9 +6,13 @@ public class Timer : MonoBehaviour
 {
     public float totalTime;
     private float timer;
-    private bool paused;
-    private bool inited;
-    
+    protected bool paused;
+    protected bool inited;
+    public delegate void TimerEvent();
+    public TimerEvent OnFinish;
+    public TimerEvent OnInit;
+    public TimerEvent OnTick;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,21 +35,21 @@ public class Timer : MonoBehaviour
                 }
                 else
                 {
-                    TimerHUD.OnRunning.Invoke();
+                    OnTick.Invoke();
                 }
             }
         }
     }
 
-    public void Init()
+    public virtual void Init()
     {
         inited = true;
-        TimerHUD.OnInit.Invoke();
+        OnInit.Invoke();
     }
 
-    public void Finish()
+    public virtual void Finish()
     {
-        TimerHUD.OnFinish.Invoke();
+        OnFinish.Invoke();
         inited = false;
     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public bool alive = true;
+    public int pointReward;
 
     [ContextMenu("Kill")]
     public void Kill()
@@ -15,6 +16,7 @@ public class Enemy : MonoBehaviour
             alive = false;
 
             transform.SetLayer(LayerMask.NameToLayer("Body"));
+            PointsHUD.AddPoints(pointReward);
         }
     }
 }
