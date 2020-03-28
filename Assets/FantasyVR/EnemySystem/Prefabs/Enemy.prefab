@@ -834,6 +834,7 @@ GameObject:
   - component: {fileID: 794246108187487197}
   - component: {fileID: 794246108138289172}
   - component: {fileID: 8637285683325855074}
+  - component: {fileID: 258840877927289841}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -905,6 +906,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alive: 1
   pointReward: 50
+  timer: {fileID: 258840877927289841}
+--- !u!114 &258840877927289841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794246108180191261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127d012335979ef428da37a9148aa086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalTime: 10
 --- !u!1 &794246108180191263
 GameObject:
   m_ObjectHideFlags: 0

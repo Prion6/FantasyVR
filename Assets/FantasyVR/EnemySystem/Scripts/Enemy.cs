@@ -6,6 +6,12 @@ public class Enemy : MonoBehaviour
 {
     public bool alive = true;
     public int pointReward;
+    public Timer timer;
+
+    private void Start()
+    {
+        timer.OnFinish += Vanish;
+    }
 
     [ContextMenu("Kill")]
     public void Kill()
@@ -19,6 +25,13 @@ public class Enemy : MonoBehaviour
             PointsHUD.AddPoints(pointReward);
         }
     }
+
+    public void Vanish()
+    {
+        Destroy(gameObject);
+    }
+
+    
 }
 
 public static class TransformExtensions

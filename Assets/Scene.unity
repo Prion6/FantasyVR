@@ -1892,7 +1892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a850e894079456419d719485c0fc8f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 0}
+  timer: {fileID: 1298463937}
   pointReward: 5000
 --- !u!65 &1298463939
 BoxCollider:
