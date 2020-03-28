@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: battle theme
-    clip: {fileID: 8300000, guid: ffbe122cdd7430e40975553547b13a5b, type: 3}
+    clip: {fileID: 8300000, guid: 2b94ad35d54e954479d3a23534e5d85e, type: 3}
     volume: 1
     pitch: 1
     loop: 1
