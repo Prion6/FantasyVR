@@ -62,8 +62,8 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: charge attack
-    clip: {fileID: 8300000, guid: 7c446becf8667fa47ba3fe7f20c0cdb6, type: 3}
+  - name: ArghSound
+    clip: {fileID: 8300000, guid: 0eafb0b5a8bba08408a126191fa0f446, type: 3}
     volume: 1
     pitch: 1
     loop: 0
