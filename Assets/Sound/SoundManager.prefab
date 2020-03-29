@@ -50,8 +50,8 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: capture
-    clip: {fileID: 8300000, guid: 0220824b0dfa62149b45f08f3562bb3b, type: 3}
+  - name: MenuSong
+    clip: {fileID: 8300000, guid: 062a88a571c6f2c43a95d767dc75ebbd, type: 3}
     volume: 1
     pitch: 1
     loop: 0
