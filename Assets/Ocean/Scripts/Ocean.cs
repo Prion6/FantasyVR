@@ -937,8 +937,9 @@ public class Ocean : MonoBehaviour
 			//In reflection mode, use tangent w for foam strength
 			if (reflectionRefractionEnabled) {
 				float deltaTime = Time.deltaTime;
-				Vector3 playerPosition =  player.position;
-				Vector3 currentPosition = transform.position;
+                //Vector3 playerPosition =  player.position;
+                Vector3 playerPosition = Vector3.zero;
+                Vector3 currentPosition = transform.position;
 
 				for (int y = 0; y < g_height; y++) {
 					for (int x = 0; x < g_width; x++) {

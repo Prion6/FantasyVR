@@ -11,16 +11,17 @@ public class SpawnPoint : MonoBehaviour
     public float deltaTimer = 10;
     private float timer = 0;
 
+
     private void Awake()
     {
-        //var refernece = transform.GetChild(0);
-        //Destroy(refernece.gameObject);
+        var refernece = transform.GetChild(0);
+        Destroy(refernece.gameObject);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        timer = Random.Range(0, 10);
     }
 
     // Update is called once per frame

@@ -18,7 +18,7 @@ public class PointsHUD : HUD
     // Update is called once per frame
     void Update()
     {
-        OnRunning.Invoke();
+        OnRunning?.Invoke();
     }
 
     public static void AddPoints(float points)

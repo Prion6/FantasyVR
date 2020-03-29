@@ -9,8 +9,6 @@ public class SoundManager : MonoBehaviour
 
     public static SoundManager instance;
 
-    public Timer timer; 
-
     void Awake()
     {
         if (instance == null)
@@ -39,7 +37,6 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         Play("battle theme");
-        timer.OnFinish += WinSoundPlay;
 
     }
 
@@ -64,11 +61,5 @@ public class SoundManager : MonoBehaviour
         }
         s.source.Play();
     }
-
-
-
-
-
-
 
 }
