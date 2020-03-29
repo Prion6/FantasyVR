@@ -64,6 +64,8 @@ namespace WeaponSystem
 
             nextShootIn = Time.time + shootCD;
             onShoot.Invoke();
+            FindObjectOfType<SoundManager>().Play("normal attack");
+
 
             StartCoroutine(Vibration());
         }

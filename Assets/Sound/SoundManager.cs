@@ -9,6 +9,8 @@ public class SoundManager : MonoBehaviour
 
     public static SoundManager instance;
 
+    public Timer timer; 
+
     void Awake()
     {
         if (instance == null)
@@ -37,6 +39,8 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         Play("battle theme");
+        timer.OnFinish += WinSoundPlay;
+
     }
 
     public void Play (string name)
@@ -49,6 +53,18 @@ public class SoundManager : MonoBehaviour
 
         s.source.Play();
     }
+
+
+    public void WinSoundPlay()
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == "Winsound");
+        if(s == null)
+        {
+            return;
+        }
+        s.source.Play();
+    }
+
 
 
 

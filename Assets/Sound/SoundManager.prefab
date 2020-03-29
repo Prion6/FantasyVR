@@ -68,7 +68,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Win sound
+  - name: Winsound
     clip: {fileID: 8300000, guid: 02460093a5cf94b4eb792cdeec16c0d2, type: 3}
     volume: 1
     pitch: 1
