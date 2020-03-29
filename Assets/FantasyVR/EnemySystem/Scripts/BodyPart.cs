@@ -13,7 +13,7 @@ public class BodyPart : MonoBehaviour
     {
         if ((collidableObjects.value & (1 << collision.collider.gameObject.layer)) > 0)
         {
-            onCollisionEnter.Invoke();
+            onCollisionEnter?.Invoke();
         }
     }
 }

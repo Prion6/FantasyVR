@@ -7,6 +7,8 @@ TagManager:
   - Ocean
   - FxTemporaire
   - Bullet
+  - Enemy_Bullet
+  - Skull
   layers:
   - Default
   - TransparentFX

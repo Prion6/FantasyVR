@@ -9,8 +9,8 @@ public class MyEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer.OnFinish += Vanish;
-        timer.Init();
+        //timer.OnFinish += Vanish;
+        //timer.Init();
     }
 
     // Update is called once per frame

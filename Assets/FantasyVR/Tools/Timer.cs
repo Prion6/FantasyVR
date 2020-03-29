@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Timer : MonoBehaviour
     protected bool paused;
     protected bool inited;
     public delegate void TimerEvent();
-    public TimerEvent OnFinish;
+    public UnityEvent OnFinish;
     public TimerEvent OnInit;
     public TimerEvent OnTick;
 

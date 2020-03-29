@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour
     public void Impact()
     {
         Instantiate(particle_impact, transform.position, Quaternion.identity);
-        transform.GetChild(0).SetParent(null);
+        //transform.GetChild(0).SetParent(null);
         Destroy(this.gameObject);
     }
 }

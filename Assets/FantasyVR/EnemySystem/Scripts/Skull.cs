@@ -2,24 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
 public class Skull : MonoBehaviour
 {
-    public Transform target;
-    private Rigidbody rb;
-    public float movForce;
+    private Transform target;
+    public float speed;
     // Start is called before the first frame update
     void Start()
     {
-        target = FindObjectOfType<OVRPlayerController>().transform;
-        rb = GetComponent<Rigidbody>();
-        rb.useGravity = false;
+        target = FindObjectOfType<MyPLayer>().transform;
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.LookAt(target);
-        rb.AddForce(movForce*Vector3.forward);
+        this.transform.Translate(Vector3.forward * speed* Time.deltaTime);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag == "Bullet")
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Bullet")
+        {
+            Destroy(gameObject);
+        }
     }
 }
