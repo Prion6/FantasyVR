@@ -23,6 +23,7 @@ public class Skull : MonoBehaviour
     {
         if(other.gameObject.tag == "Bullet")
         {
+            MyPLayer.score += 300;
             Destroy(gameObject);
         }
     }
@@ -31,6 +32,7 @@ public class Skull : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
+            MyPLayer.score += 300;
             Destroy(gameObject);
         }
     }

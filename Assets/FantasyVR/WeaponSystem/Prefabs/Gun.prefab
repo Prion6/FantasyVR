@@ -70,7 +70,7 @@ MonoBehaviour:
   shootPoint: {fileID: 1833251747856581973}
   bullet_prefab: {fileID: 163156239919402670, guid: e9d7e608da444d045a48005115671596,
     type: 3}
-  shootCD: 1
+  shootCD: 0.5
   autoShoot: 0
   isRight: 0
   onShoot:
@@ -87,8 +87,6 @@ MonoBehaviour:
           m_StringArgument: Shoot
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!95 &3944809323692367831
 Animator:
   serializedVersion: 3

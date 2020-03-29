@@ -29,7 +29,7 @@ public class MyEnemy : MonoBehaviour
 
     public void Die()
     {
-        PointsHUD.AddPoints(pointReward);
+        //PointsHUD.AddPoints(pointReward);
         Destroy(gameObject);
     }
 

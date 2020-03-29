@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if(timer >=5)
+        if(timer >=10)
         {
             timer = 0;
             Shoot();
@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour
             alive = false;
 
             transform.SetLayer(LayerMask.NameToLayer("Body"));
-            PointsHUD.AddPoints(pointReward);
+            //PointsHUD.AddPoints(pointReward);
         }
     }
 
@@ -47,6 +47,22 @@ public class Enemy : MonoBehaviour
     public void Shoot()
     {
         Instantiate(bullet,pivot);   
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Bullet")
+        {
+            MyPLayer.score += 100;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Bullet")
+        {
+            MyPLayer.score += 100;
+        }
     }
 
 }
