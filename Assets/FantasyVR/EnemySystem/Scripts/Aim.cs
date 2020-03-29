@@ -15,12 +15,12 @@ public class Aim : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        bodyPart = anim.GetBoneTransform(selectedPart);
+        //bodyPart = anim.GetBoneTransform(selectedPart);
     }
 
     void LateUpdate()
     {
-        bodyPart.LookAt(target.position);
-        bodyPart.rotation = bodyPart.rotation * Quaternion.Euler(offset);
+        //bodyPart.LookAt(target.position);
+        //bodyPart.rotation = bodyPart.rotation * Quaternion.Euler(offset);
     }
 }

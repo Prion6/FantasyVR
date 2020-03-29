@@ -6,11 +6,24 @@ public class Enemy : MonoBehaviour
 {
     public bool alive = true;
     public int pointReward;
-    public Timer timer;
+
+    public Bullet bullet;
+    public Transform pivot;
+    private float timer = 0;
 
     private void Start()
     {
-        timer.OnFinish += Vanish;
+
+    }
+
+    private void Update()
+    {
+        if(timer >=5)
+        {
+            timer = 0;
+            Shoot();
+        }
+        timer += Time.deltaTime;
     }
 
     [ContextMenu("Kill")]
@@ -31,8 +44,14 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    
+    public void Shoot()
+    {
+        Instantiate(bullet,pivot);   
+    }
+
 }
+
+
 
 public static class TransformExtensions
 {

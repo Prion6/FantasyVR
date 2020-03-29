@@ -28,7 +28,7 @@ public class Lvl_Manager : MonoBehaviour
     public void StartGame()
     {
         timer.Init();
-
+        Debug.Log("Spawn count: "+ spawns.Length);
         foreach (var spawn in spawns)
         {
             spawn.gameObject.SetActive(true);

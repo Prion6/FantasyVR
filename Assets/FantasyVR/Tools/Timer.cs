@@ -35,7 +35,7 @@ public class Timer : MonoBehaviour
                 }
                 else
                 {
-                    OnTick.Invoke();
+                    OnTick?.Invoke();
                 }
             }
         }
@@ -44,12 +44,12 @@ public class Timer : MonoBehaviour
     public virtual void Init()
     {
         inited = true;
-        OnInit.Invoke();
+        OnInit?.Invoke();
     }
 
     public virtual void Finish()
     {
-        OnFinish.Invoke();
+        OnFinish?.Invoke();
         inited = false;
     }
 
